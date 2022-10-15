@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
-import NavBar from "../../components/nav";
+import NavBarAtlantis from "../../components/nav";
 import * as Z from "./style";
 export default function Home() {
   return (
     <Z.Home>
       {/* Texto inspirado no site Cabanellos Advocacia */}
-      <NavBar />
+      <NavBarAtlantis />
       <main>
         <div className="conteudo">
           <h1>Seja bem vindo ao Antlatis!</h1>
