@@ -1,19 +1,33 @@
+import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+
 import * as Z from "./style";
 export default class Client {
   card(nome: string, cpf: string, reserva: string, link: string) {
     return (
       <Z.Home>
-        <div className="card-info">
-          <div className="info-client">
-            <h2>Nome: {nome}</h2>
-            <h3>CPF: {cpf}</h3>
-            <h3>Reserva: {reserva} </h3>
-          </div>
-          <div className="link">
-            <Link to={`${link}`}>Ver Detalhes</Link>
-          </div>
-        </div>
+        <Card border="secondary" className="card-style">
+          <Card.Header className="header-style">
+            <div className="items">
+              <div className="nome">{nome}</div>
+              <div className="cpf">
+                Documento: <span>{cpf}</span>
+              </div>
+            </div>
+          </Card.Header>
+          <Card.Body className="body-style">
+            <Card.Text className="text-style">
+              <div className="items">
+                <div className="reserva">
+                  Reserva: <span>{reserva}</span>
+                </div>
+                <div className="link">
+                  <Link to={`/clientes/${link}`}>Ver Mais</Link>
+                </div>
+              </div>
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </Z.Home>
     );
   }
