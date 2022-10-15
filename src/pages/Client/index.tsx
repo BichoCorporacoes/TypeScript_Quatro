@@ -9,19 +9,13 @@ export default function Cliente() {
       <NavBar />
       <main>
         <div className="conteudo">
-          <h1>Titulares</h1>
+          <h1>Clientes Titulares</h1>
           <div className="mapCliente">
             {cliente.card(
-              "Gabriel Souza Bicho Nunes",
+              "Gabriel Souza ",
               "432.432.432-32",
-              "Solteiro Simples",
-              "#"
-            )}
-            {cliente.card(
-              "Red Wacky League",
-              "432.432.432-32",
-              "Familia Super",
-              "#"
+              "Familia Simples",
+              `${1}`
             )}
           </div>
         </div>

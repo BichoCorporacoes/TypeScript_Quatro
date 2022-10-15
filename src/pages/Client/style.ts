@@ -11,7 +11,7 @@ export const Home = styled.div`
     .conteudo {
       background-color: #fcf9f2;
       margin: auto;
-      width: 50%;
+      width: 60%;
       height: 80%;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -25,12 +25,15 @@ export const Home = styled.div`
         font-family: "Handlee", cursive;
       }
       .mapCliente {
+        margin-top: -0.4em;
+ 
         height: 88.3%;
         overflow-x: hidden;
+
       }
     }
     .mapCliente::-webkit-scrollbar {
-      width: 0.5em;
+      width: 1em;
     }
     .mapCliente::-webkit-scrollbar-track {
       box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
