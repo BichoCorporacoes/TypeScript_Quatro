@@ -11,7 +11,7 @@ export const Home = styled.div`
     .conteudo {
       background-color: #fcf9f2;
       margin: auto;
-      width: 60%;
+      width: 50%;
       height: 80%;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,

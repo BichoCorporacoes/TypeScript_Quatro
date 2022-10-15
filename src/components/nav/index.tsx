@@ -3,10 +3,11 @@ import * as Z from "./style";
 export default function NavBar() {
   return (
     <Z.NavBar>
-      <div className="atlantis">
-        <h1><Link to={"/"}>Atlantis</Link></h1>
-      </div>
-      <div className="sideContent">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+        <div className="sideContent">
         <table>
           <tr>
             <td>
