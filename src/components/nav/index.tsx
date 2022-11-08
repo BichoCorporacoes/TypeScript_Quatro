@@ -13,26 +13,34 @@ export default function NavBarAtlantis() {
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          className="teste"
+          className="response"
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <div className="sideContent">
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="/acomodacao">Acomodações</Nav.Link>
-              <Nav.Link href="/equipe">Equipe</Nav.Link>
-              <NavDropdown
-                title="Clientes"
-                id="collasible-nav-dropdown"
-                menuVariant="white"
-              >
-                <NavDropdown.Item className="DropDownItem">
-                  <Link to={"/clientes-cadastro"}>Cadastrar Clientes</Link>
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item className="DropDownItem">
-                  <Link to={"/clientes"}>Listar Clientes</Link>
-                </NavDropdown.Item>
-              </NavDropdown>
+              {["Acomodação", "Equipe", "Clientes", "Login"].map((itensNav) => {
+                if (itensNav.includes("Clientes")) {
+                  return (
+                    <NavDropdown
+                      title="Clientes"
+                      id="collasible-nav-dropdown"
+                      menuVariant="white"
+                    >
+                      <NavDropdown.Item className="DropDownItem">
+                        <Link to={"/cliente/clientes-cadastro"}>
+                          Cadastrar Clientes
+                        </Link>
+                      </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item className="DropDownItem">
+                        <Link to={"/clientes"}>Listar Clientes</Link>
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  );
+                } else {
+                  return <Nav.Link href={`/${itensNav}`}>{itensNav}</Nav.Link>;
+                }
+              })}
             </Nav>
           </div>
         </Navbar.Collapse>

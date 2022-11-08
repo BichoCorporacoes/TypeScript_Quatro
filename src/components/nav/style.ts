@@ -36,7 +36,7 @@ export const NavBar = styled.div`
       color: #e6b31e;
     }
   }
-  .teste {
+  .response {
     margin-right: 15px;
   }
 `;

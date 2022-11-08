@@ -13,9 +13,12 @@
     "@emotion/styled": "^11.10.4",
     "@react-navigation/native": "^6.0.13",
     "bootstrap": "^5.2.2",
+    "primeicons": "^6.0.1",
+    "primereact": "^8.7.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.39.1",
     "react-router-dom": "^6.4.2"
   },
   "devDependencies": {

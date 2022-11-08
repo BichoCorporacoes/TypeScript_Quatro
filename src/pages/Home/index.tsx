@@ -3,7 +3,6 @@ import * as Z from "./style";
 export default function Home() {
   return (
     <Z.Home>
-      {/* Texto inspirado no site Cabanellos Advocacia */}
       <NavBarAtlantis />
       <main>
         <div className="conteudo">
