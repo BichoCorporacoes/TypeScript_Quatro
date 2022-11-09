@@ -38,7 +38,11 @@ export default function NavBarAtlantis() {
                     </NavDropdown>
                   );
                 } else {
-                  return <Nav.Link href={`/${itensNav}`}>{itensNav}</Nav.Link>;
+                  return (
+                    <Nav.Link>
+                      <Link to={`/${itensNav}`}>{itensNav}</Link>
+                    </Nav.Link>
+                  );
                 }
               })}
             </Nav>

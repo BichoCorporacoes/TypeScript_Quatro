@@ -5,6 +5,7 @@ import Cliente from "../pages/Client";
 import Home from "../pages/Home";
 import ProfileCliente from "../pages/ProfileClient";
 import Team from "../pages/teams";
+import LoginPage from "../pages/Login";
 
 function Routes() {
   return (
@@ -12,9 +13,13 @@ function Routes() {
       <Route path="/" element={<Home />} />
       <Route path="/equipe" element={<Team />} />
       <Route path="/clientes" element={<Cliente />} />
+      <Route path="/Login" element={<LoginPage />} />
       <Route path="/clientes/:id" element={<ProfileCliente />} />
       <Route path="/cliente/clientes-cadastro" element={<CadastroAdmin />} />
-      <Route path="/cliente/cadastro-continue/:id" element={<CadastroAdminParteDois />} />
+      <Route
+        path="/cliente/cadastro-continue/:id"
+        element={<CadastroAdminParteDois />}
+      />
     </RoutesWrapper>
   );
 }
