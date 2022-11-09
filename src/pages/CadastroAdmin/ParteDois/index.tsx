@@ -23,7 +23,7 @@ export default function CadastroAdminParteDois() {
         <div className="conteudo">
           <div className="formulario">
             <Tabs
-              defaultActiveKey="ends"
+              defaultActiveKey="docs"
               id="fill-tab-example"
               className="mb-3"
               fill

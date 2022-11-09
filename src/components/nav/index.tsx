@@ -18,7 +18,7 @@ export default function NavBarAtlantis() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <div className="sideContent">
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              {["Acomodação", "Equipe", "Clientes", "Login"].map((itensNav) => {
+              {["Acomodação", "Clientes", "Login"].map((itensNav) => {
                 if (itensNav.includes("Clientes")) {
                   return (
                     <NavDropdown
@@ -40,7 +40,7 @@ export default function NavBarAtlantis() {
                 } else {
                   return (
                     <Nav.Link>
-                      <Link to={`/${itensNav}`}>{itensNav}</Link>
+                      <Link to={`/${itensNav.toLowerCase()}`}>{itensNav}</Link>
                     </Nav.Link>
                   );
                 }
