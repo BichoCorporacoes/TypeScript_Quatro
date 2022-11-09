@@ -16,7 +16,7 @@ export default function CadastroAdmin() {
           <div className="formulario">
             <Form>
               <Form.Group
-                className="mb-3"
+                className="mb-3 form-group"
                 controlId="exampleForm.ControlInput1"
               >
                 <Form.Label>Nome do titular</Form.Label>
@@ -26,24 +26,26 @@ export default function CadastroAdmin() {
                 />
               </Form.Group>
               <Form.Group
-                className="mb-3"
+                className="mb-3 form-group"
                 controlId="exampleForm.ControlInput1"
               >
                 <Form.Label>Nome Social do titular</Form.Label>
                 <Form.Control type="text" placeholder="BichoNunes" />
               </Form.Group>
-              <Button
-                onClick={() =>
-                  navigate(`/cliente/cadastro-continue/${1}`, {
-                    state: {
-                      data: user.id,
-                    },
-                  })
-                }
-                as="input"
-                type="submit"
-                value="Submit"
-              />
+              <div className="btn-Controll">
+                <Button
+                  onClick={() =>
+                    navigate(`/cliente/cadastro-continue/${1}`, {
+                      state: {
+                        data: user.id,
+                      },
+                    })
+                  }
+                  as="input"
+                  type="submit"
+                  value="Submit"
+                />
+              </div>
             </Form>
           </div>
         </div>

@@ -31,34 +31,43 @@ export default class CadastroTelefone {
       },
     });
     return (
-      <Form>
-        {fields.map((item, index) => {
-          return (
-            <>
-              <label htmlFor="basic">Digite o Numero do telefone</label>
-              <InputMask
-                id="CPF"
-                mask="(99)999999999"
-                placeholder="(XX)XXXXXXXXX"
-                required
-              ></InputMask>
-              <Button variant="warning" onClick={() => remove(index)}>
-                Remove
-              </Button>
-            </>
-          );
-        })}
-        <Button
-          variant="warning"
-          onClick={() => {
-            append({
-              numero: "",
-              ddd: "",
-            });
-          }}
-        >
-          Add More
-        </Button>
+      <Form className="tell-controll">
+        <h3>Cadastro de telefones</h3>
+        <div className="controll">
+          {fields.map((item, index) => {
+            return (
+              <>
+                <label htmlFor="basic">Digite o Numero do telefone</label>
+                <InputMask
+                  id="CPF"
+                  mask="(99)999999999"
+                  placeholder="(XX)XXXXXXXXX"
+                  required
+                  className="input-mask"
+                ></InputMask>
+                <Button
+                  className="btn-remove"
+                  variant="warning"
+                  onClick={() => remove(index)}
+                >
+                  Remove
+                </Button>
+              </>
+            );
+          })}
+          <Button
+            variant="warning"
+            onClick={() => {
+              append({
+                numero: "",
+                ddd: "",
+              });
+            }}
+            className="btn-append"
+          >
+            Add More
+          </Button>
+        </div>
       </Form>
     );
   }

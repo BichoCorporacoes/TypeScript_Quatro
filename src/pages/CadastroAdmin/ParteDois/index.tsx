@@ -23,41 +23,45 @@ export default function CadastroAdminParteDois() {
         <div className="conteudo">
           <div className="formulario">
             <Tabs
-              defaultActiveKey="home"
+              defaultActiveKey="ends"
               id="fill-tab-example"
               className="mb-3"
               fill
             >
-              <Tab eventKey="home" title="Documentos">
-                {documentos.formulario()}
+              <Tab eventKey="docs" title="Documentos">
+                <div className="documento">{documentos.formulario()}</div>
               </Tab>
-              <Tab eventKey="profile" title="Telefone">
-                {" "}
-                {telefones.formulario()}
+              <Tab eventKey="tells" title="Telefone">
+                <div className="telefones">{telefones.formulario()}</div>
               </Tab>
-              <Tab eventKey="longer-tab" title="Dependentes">
-                {dependentes.formulario()}
+              <Tab eventKey="deps" title="Dependentes">
+                <div className="dependentes">{dependentes.formulario()}</div>
               </Tab>
-              <Tab eventKey="contact" title="Endereco/Acomodação">
-                <h3>Adicionar Endereço</h3>
-                {end.map((endInf) => {
-                  return (
-                    <span className="p-float-label">
-                      <InputText
-                        id={endInf}
-                        value={value}
-                        onChange={(e) => setValue(e.target.value)}
-                      />
-                      <label htmlFor={endInf}>{endInf}</label>
-                    </span>
-                  );
-                })}
-                <h3>Acomodações</h3>
-                <h3>DropDown das Acomodações</h3>
+              <Tab eventKey="ends" title="Endereco/Acomodação">
+                <div className="endereco">
+                  <div className="controll">
+                    <h3>Adicionar Endereço</h3>
+                    <div className="end-controll">
+                      {end.map((endInf) => {
+                        return (
+                          <span className="p-float-label span-controll">
+                            <InputText
+                              id={endInf}
+                              onChange={(e) => setValue(e.target.value)}
+                            />
+                            <label htmlFor={endInf}>{endInf}</label>
+                          </span>
+                        );
+                      })}
+                    </div>
+                    <h3>Acomodações</h3>
+                    <h3>DropDown das Acomodações</h3>
+                  </div>
+                </div>
               </Tab>
             </Tabs>
           </div>
-          <button>Terminar Cadastro</button>
+          <button className="btn-end">Terminar Cadastro</button>
         </div>
       </main>
     </Z.Home>
