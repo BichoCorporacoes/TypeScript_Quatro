@@ -37,7 +37,7 @@ export default function NavBarAtlantis() {
                       </NavDropdown.Item>
                     </NavDropdown>
                   );
-                } else if ("Acomodação") {
+                } else if (itensNav === "Acomodação") {
                   return (
                     <Nav.Link>
                       <Link to={`/acomodacao`}>{itensNav}</Link>
