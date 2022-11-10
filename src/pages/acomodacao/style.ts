@@ -17,7 +17,6 @@ export const Main = styled.div`
         .header-main {
           display: flex;
           align-items: center;
-          justify-content: space-around;
           width: 100%;
           font-size: 1.5em;
         }

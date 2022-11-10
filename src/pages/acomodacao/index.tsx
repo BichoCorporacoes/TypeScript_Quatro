@@ -73,10 +73,7 @@ export default function Acomodacao() {
               <Accordion>
                 <Accordion.Item className="acorde" eventKey="0">
                   <Accordion.Header className="header">
-                    <div className="header-main">
-                      Reserve: {i.nome}{" "}
-                      <Button className="btn">Reservar</Button>
-                    </div>
+                    <div className="header-main">Reserve: {i.nome} </div>
                   </Accordion.Header>
                   <Accordion.Body className="body">
                     <h3>Cama Solteiro</h3>

@@ -33,11 +33,17 @@ export default function NavBarAtlantis() {
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item className="DropDownItem">
+                        <Link to={"/funcionario/cadastro"}>
+                          Cadastrar Funcionarios
+                        </Link>
+                      </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item className="DropDownItem">
                         <Link to={"/clientes"}>Listar Clientes</Link>
                       </NavDropdown.Item>
                     </NavDropdown>
                   );
-                } else if (itensNav === "Acomodação") {
+                } else if (itensNav.includes("Acomodação")) {
                   return (
                     <Nav.Link>
                       <Link to={`/acomodacao`}>{itensNav}</Link>
