@@ -5,6 +5,7 @@ import Cliente from "../pages/Client";
 import Home from "../pages/Home";
 import ProfileCliente from "../pages/ProfileClient";
 import LoginPage from "../pages/Login";
+import Acomodacao from "../pages/acomodacao";
 
 function Routes() {
   return (
@@ -14,6 +15,7 @@ function Routes() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/clientes/:id" element={<ProfileCliente />} />
       <Route path="/cliente/clientes-cadastro" element={<CadastroAdmin />} />
+      <Route path="/acomodacao" element={<Acomodacao />} />
       <Route
         path="/cliente/cadastro-continue/:id"
         element={<CadastroAdminParteDois />}
